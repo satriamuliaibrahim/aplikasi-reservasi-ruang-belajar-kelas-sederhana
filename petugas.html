@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemeriksaan Petugas - RuangBelajar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div>
+                <div class="brand">
+                    <div class="logo-box">RB</div>
+                    <span class="brand-title">RuangBelajar</span>
+                </div>
+                <div class="menu-section-title">MENU UTAMA</div>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-item"><span class="icon-badge">DB</span><span>Dashboard</span></a>
+                    <a href="ruangan.html" class="nav-item"><span class="icon-badge">RG</span><span>Ruangan</span></a>
+                    <a href="pengguna.html" class="nav-item"><span class="icon-badge">PG</span><span>Pengguna</span></a>
+                    <a href="reservasi.html" class="nav-item"><span class="icon-badge">RS</span><span>Reservasi</span></a>
+                    <a href="jadwal.html" class="nav-item"><span class="icon-badge">JD</span><span>Jadwal</span></a>
+                    <a href="petugas.html" class="nav-item active"><span class="icon-badge">PT</span><span>Petugas</span></a>
+                    <a href="laporan.html" class="nav-item"><span class="icon-badge">LP</span><span>Laporan</span></a>
+                </nav>
+            </div>
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item logout-item" id="btnLogout"><span class="icon-badge">KL</span><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-info">
+                    <h1>Aplikasi Reservasi Ruang</h1>
+                    <p>Pusat layanan ruang belajar kampus</p>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">DA</div>
+                    <div class="user-details">
+                        <div class="user-name">Dewi Anggraini</div>
+                        <div class="user-role">Petugas Ruangan</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-body">
+                <div class="dashboard-banner">
+                    <div class="welcome-text">
+                        <h2>Pemeriksaan Petugas</h2>
+                        <p>Periksa kesiapan ruang dan berikan rekomendasi reservasi.</p>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card"><div class="card-header"><span class="card-title">Perlu Diperiksa</span><span class="card-badge">PR</span></div><div class="card-value">6</div><div class="card-subtitle">Reservasi menunggu tindakan</div></div>
+                    <div class="card"><div class="card-header"><span class="card-title">Ruangan Siap</span><span class="card-badge">OK</span></div><div class="card-value">9</div><div class="card-subtitle">Kondisi baik digunakan</div></div>
+                    <div class="card"><div class="card-header"><span class="card-title">Perlu Perbaikan</span><span class="card-badge warning-bg">PP</span></div><div class="card-value">2</div><div class="card-subtitle">Fasilitas sedang diperiksa</div></div>
+                    <div class="card"><div class="card-header"><span class="card-title">Diperiksa Hari Ini</span><span class="card-badge">HR</span></div><div class="card-value">8</div><div class="card-subtitle">Terakhir pukul 14.20</div></div>
+                </div>
+
+                <div class="filter-card">
+                    <div class="filter-group flex-2"><label>Cari reservasi</label><input type="text" placeholder="Kode, pemohon, atau ruangan"></div>
+                    <div class="filter-group flex-1"><label>Tanggal</label><input type="date"></div>
+                    <button class="btn-filter">Tampilkan</button>
+                </div>
+
+                <div class="table-card">
+                    <div class="card-top-bar"><div><h3>Daftar Pemeriksaan Reservasi</h3><p class="sub-text">Tindakan tombol berikut hanya elemen visual prototipe</p></div></div>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>RESERVASI</th><th>RUANGAN</th><th>JADWAL</th><th>KONDISI RUANGAN</th><th>CATATAN / REKOMENDASI</th><th>TINDAKAN REKOMENDASI</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><b>RSV-24051</b><br><small class="text-sub">Siti Nurhaliza</small></td><td>Ruang Diskusi A</td><td>24 Mei, 08.00-10.00</td><td><span class="badge blue-light-pill">Baik dan siap</span></td><td>AC, proyektor, dan papan tulis berfungsi normal.</td><td><button class="btn-sm btn-filter">Rekomendasikan</button> <button class="btn-sm btn-outline">Tinjau</button></td></tr>
+                            <tr><td><b>RSV-24052</b><br><small class="text-sub">Raka Aditya</small></td><td>Ruang Seminar</td><td>25 Mei, 09.00-12.00</td><td><span class="badge warning-pill">Perlu pengecekan</span></td><td>Kabel HDMI proyektor perlu diganti sebelum kegiatan.</td><td><button class="btn-sm btn-filter">Rekomendasikan</button> <button class="btn-sm btn-danger-light">Perlu Perbaikan</button></td></tr>
+                            <tr><td><b>RSV-24053</b><br><small class="text-sub">Alya Safitri</small></td><td>Lab Komputer 2</td><td>25 Mei, 13.00-15.00</td><td><span class="badge blue-light-pill">Baik dan siap</span></td><td>Seluruh komputer aktif, jaringan internet stabil.</td><td><button class="btn-sm btn-filter">Rekomendasikan</button> <button class="btn-sm btn-outline">Tinjau</button></td></tr>
+                            <tr><td><b>RSV-24054</b><br><small class="text-sub">Dimas Saputra</small></td><td>Ruang Kelas 2.3</td><td>26 Mei, 10.00-12.00</td><td><span class="badge gray-pill">Dalam pembersihan</span></td><td>Ruangan dapat digunakan setelah pukul 09.30.</td><td><button class="btn-sm btn-filter">Rekomendasikan</button> <button class="btn-sm btn-outline">Tinjau</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

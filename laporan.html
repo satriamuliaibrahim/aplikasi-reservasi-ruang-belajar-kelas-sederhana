@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap & Laporan - RuangBelajar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div>
+                <div class="brand"><div class="logo-box">RB</div><span class="brand-title">RuangBelajar</span></div>
+                <div class="menu-section-title">MENU UTAMA</div>
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-item"><span class="icon-badge">DB</span><span>Dashboard</span></a>
+                    <a href="ruangan.html" class="nav-item"><span class="icon-badge">RG</span><span>Ruangan</span></a>
+                    <a href="pengguna.html" class="nav-item"><span class="icon-badge">PG</span><span>Pengguna</span></a>
+                    <a href="reservasi.html" class="nav-item"><span class="icon-badge">RS</span><span>Reservasi</span></a>
+                    <a href="jadwal.html" class="nav-item"><span class="icon-badge">JD</span><span>Jadwal</span></a>
+                    <a href="petugas.html" class="nav-item"><span class="icon-badge">PT</span><span>Petugas</span></a>
+                    <a href="laporan.html" class="nav-item active"><span class="icon-badge">LP</span><span>Laporan</span></a>
+                </nav>
+            </div>
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item logout-item" id="btnLogout"><span class="icon-badge">KL</span><span>Logout</span></a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="header-info"><h1>Aplikasi Reservasi Ruang</h1><p>Pusat layanan ruang belajar kampus</p></div>
+                <div class="user-profile"><div class="avatar">AR</div><div class="user-details"><div class="user-name">Andi Ramadhan</div><div class="user-role">Administrator</div></div></div>
+            </header>
+
+            <div class="dashboard-body">
+                <div class="dashboard-banner">
+                    <div class="welcome-text">
+                        <h2>Rekap dan Laporan</h2>
+                        <p>Ringkasan penggunaan ruangan berdasarkan periode.</p>
+                    </div>
+                    <button class="btn-primary" onclick="window.print()">Cetak Laporan</button>
+                </div>
+
+                <div class="filter-card">
+                    <div class="filter-group flex-1"><label>Tanggal awal</label><input type="date" value="2025-05-01"></div>
+                    <div class="filter-group flex-1"><label>Tanggal akhir</label><input type="date" value="2025-05-31"></div>
+                    <div class="filter-group flex-1"><label>Ruangan</label><select><option>Semua ruangan</option></select></div>
+                    <button class="btn-filter">Terapkan Periode</button>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card"><div class="card-header"><span class="card-title">Diajukan</span><span class="card-badge">AJ</span></div><div class="card-value">16</div><div class="card-subtitle">12% dari total reservasi</div></div>
+                    <div class="card"><div class="card-header"><span class="card-title">Disetujui</span><span class="card-badge">OK</span></div><div class="card-value">84</div><div class="card-subtitle">65% dari total reservasi</div></div>
+                    <div class="card"><div class="card-header"><span class="card-title">Selesai</span><span class="card-badge">SL</span></div><div class="card-value">24</div><div class="card-subtitle">19% dari total reservasi</div></div>
+                    <div class="card"><div class="card-header"><span class="card-title">Batal</span><span class="card-badge danger-bg">BT</span></div><div class="card-value">5</div><div class="card-subtitle">4% dari total reservasi</div></div>
+                </div>
+
+                <div class="table-card">
+                    <div class="card-top-bar">
+                        <div><h3>Rekap Penggunaan Ruangan</h3><p class="sub-text">Periode 1-31 Mei 2025</p></div>
+                        <span class="text-sub">Total 129 reservasi</span>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>KODE</th><th>NAMA RUANGAN</th><th>LOKASI</th><th>JUMLAH PEMAKAIAN</th><th>TOTAL DURASI</th><th>TINGKAT PENGGUNAAN</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><b>RG-A101</b></td><td>Ruang Diskusi A</td><td>Gedung A, Lantai 1</td><td>28 kali</td><td>56 jam</td><td><span class="badge success-pill">● Tinggi</span></td></tr>
+                            <tr><td><b>LAB-B202</b></td><td>Lab Komputer 2</td><td>Gedung B, Lantai 2</td><td>24 kali</td><td>72 jam</td><td><span class="badge success-pill">● Tinggi</span></td></tr>
+                            <tr><td><b>SEM-C301</b></td><td>Ruang Seminar</td><td>Gedung C, Lantai 3</td><td>18 kali</td><td>45 jam</td><td><span class="badge gold-pill">● Sedang</span></td></tr>
+                            <tr><td><b>RK-A203</b></td><td>Ruang Kelas 2.3</td><td>Gedung A, Lantai 2</td><td>17 kali</td><td>34 jam</td><td><span class="badge gold-pill">● Sedang</span></td></tr>
+                            <tr><td><b>RG-B105</b></td><td>Ruang Kolaborasi</td><td>Gedung B, Lantai 1</td><td>11 kali</td><td>22 jam</td><td><span class="badge purple-pill">● Rendah</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
