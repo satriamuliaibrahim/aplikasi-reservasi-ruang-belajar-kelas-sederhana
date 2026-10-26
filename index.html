@@ -1,139 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - RuangBelajar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | RuangBelajar</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div>
-                <div class="brand">
-                    <div class="logo-box">RB</div>
-                    <span class="brand-title">RuangBelajar</span>
-                </div>
-                <div class="menu-section-title">MENU UTAMA</div>
-                <nav class="nav-menu">
-                    <a href="index.html" class="nav-item active"><span class="icon-badge">DB</span><span>Dashboard</span></a>
-                    <a href="ruangan.html" class="nav-item"><span class="icon-badge">RG</span><span>Ruangan</span></a>
-                    <a href="pengguna.html" class="nav-item"><span class="icon-badge">PG</span><span>Pengguna</span></a>
-                    <a href="reservasi.html" class="nav-item"><span class="icon-badge">RS</span><span>Reservasi</span></a>
-                    <a href="jadwal.html" class="nav-item"><span class="icon-badge">JD</span><span>Jadwal</span></a>
-                    <a href="petugas.html" class="nav-item"><span class="icon-badge">PT</span><span>Petugas</span></a>
-                    <a href="laporan.html" class="nav-item"><span class="icon-badge">LP</span><span>Laporan</span></a>
-                </nav>
-            </div>
-            <div class="sidebar-bottom">
-                <a href="#" class="nav-item logout-item" id="btnLogout"><span class="icon-badge">KL</span><span>Logout</span></a>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="header">
-                <div class="header-info">
-                    <h1>Aplikasi Reservasi Ruang</h1>
-                    <p>Pusat layanan ruang belajar kampus</p>
-                </div>
-                <div class="user-profile">
-                    <div class="avatar">AR</div>
-                    <div class="user-details">
-                        <div class="user-name">Andi Ramadhan</div>
-                        <div class="user-role">Administrator</div>
-                    </div>
-                </div>
-            </header>
-
-            <div class="dashboard-body">
-                <div class="dashboard-banner">
-                    <div class="welcome-text">
-                        <h2>Ringkasan Dashboard</h2>
-                        <p>Selamat datang, berikut aktivitas reservasi hari ini.</p>
-                    </div>
-                    <button class="btn-primary" id="btnOpenModal">+ Buat Reservasi</button>
-                </div>
-
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-header"><span class="card-title">Total Ruangan</span><span class="card-badge">RG</span></div>
-                        <div class="card-value">12</div>
-                        <div class="card-subtitle">10 ruangan tersedia</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header"><span class="card-title">Total Pengguna</span><span class="card-badge">PG</span></div>
-                        <div class="card-value">248</div>
-                        <div class="card-subtitle success">+18 pengguna bulan ini</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header"><span class="card-title">Reservasi Diajukan</span><span class="card-badge warning-bg">AJ</span></div>
-                        <div class="card-value">16</div>
-                        <div class="card-subtitle warning">Perlu segera diperiksa</div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header"><span class="card-title">Reservasi Disetujui</span><span class="card-badge">OK</span></div>
-                        <div class="card-value">34</div>
-                        <div class="card-subtitle">Untuk 7 hari ke depan</div>
-                    </div>
-                </div>
-
-                <div class="dashboard-split">
-                    <div class="table-card flex-2">
-                        <div class="card-top-bar">
-                            <div>
-                                <h3>Reservasi Terbaru</h3>
-                                <p class="sub-text">Pengajuan yang baru masuk ke sistem</p>
-                            </div>
-                            <a href="reservasi.html" class="link-blue">Lihat semua</a>
-                        </div>
-                        <table class="data-table">
-                            <thead>
-                                <tr><th>KODE</th><th>PEMOHON</th><th>RUANGAN</th><th>TANGGAL</th><th>STATUS</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td><b>RSV-24051</b></td><td>Siti Nurhaliza</td><td>Ruang Diskusi A</td><td>24 Mei 2025</td><td><span class="badge warning-pill">● Diajukan</span></td></tr>
-                                <tr><td><b>RSV-24050</b></td><td>Bagas Pratama</td><td>Lab Komputer 2</td><td>24 Mei 2025</td><td><span class="badge success-pill">● Disetujui</span></td></tr>
-                                <tr><td><b>RSV-24049</b></td><td>Nabila Putri</td><td>Ruang Seminar</td><td>23 Mei 2025</td><td><span class="badge success-pill">● Disetujui</span></td></tr>
-                                <tr><td><b>RSV-24048</b></td><td>Rizky Maulana</td><td>Ruang Kelas 3.1</td><td>23 Mei 2025</td><td><span class="badge danger-pill">● Batal</span></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="table-card flex-1">
-                        <div class="card-top-bar">
-                            <div>
-                                <h3>Jadwal Hari Ini</h3>
-                                <p class="sub-text">Sabtu, 24 Mei 2025</p>
-                            </div>
-                            <a href="jadwal.html" class="link-blue">Jadwal</a>
-                        </div>
-                        <div class="timeline-list">
-                            <div class="timeline-item">
-                                <div class="time">08.00</div>
-                                <div class="timeline-content"><b>Ruang Diskusi A</b><span>Kelompok PBL Informatika</span></div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="time">10.30</div>
-                                <div class="timeline-content"><b>Lab Komputer 2</b><span>Praktikum Basis Data</span></div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="time">13.00</div>
-                                <div class="timeline-content"><b>Ruang Seminar</b><span>Presentasi Proyek Akhir</span></div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="time">15.30</div>
-                                <div class="timeline-content"><b>Ruang Kelas 3.1</b><span>Diskusi Organisasi Mahasiswa</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <script src="script.js"></script>
+<body class="login-page">
+  <main class="login-card">
+    <div class="brand-mark">RB</div>
+    <p class="eyebrow">SISTEM INFORMASI KAMPUS</p>
+    <h1>Reservasi Ruang Belajar</h1>
+    <p class="muted">Masukkan nama, NIM, dan password akun kamu untuk melanjutkan.</p>
+    <form id="loginForm">
+      <div class="form-field">
+        <label for="nama">Nama lengkap</label>
+        <input id="nama" name="nama" required placeholder="Masukkan nama lengkap" autocomplete="name">
+      </div>
+      <div class="form-field">
+        <label for="nim">NIM</label>
+        <input id="nim" name="nim" required placeholder="Masukkan NIM" autocomplete="username">
+      </div>
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required placeholder="Masukkan password" autocomplete="current-password">
+      </div>
+      <div class="form-field">
+        <label for="role">Masuk sebagai</label>
+        <select id="role">
+          <option value="mahasiswa">Mahasiswa</option>
+          <option value="petugas">Petugas</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <button class="btn primary full" type="submit">Masuk ke Dashboard →</button>
+    </form>
+    <p class="register-prompt">Belum punya akun? <a href="register.html">Daftar sekarang</a></p>
+    <p class="small-note">Prototype front-end. Login demo belum terhubung ke server atau database.</p>
+  </main>
+  <script src="js/app.js"></script>
 </body>
 </html>

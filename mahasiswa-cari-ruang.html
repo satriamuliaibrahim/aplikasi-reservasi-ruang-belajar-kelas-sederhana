@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cari Ruangan | Reservasi Ruang Belajar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="mahasiswa">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="mahasiswa-dashboard.html"><span class="brand-mark">RB</span><span>RuangBelajar<small>Reservation System</small></span></a>
+      <p class="eyebrow">MENU MAHASISWA</p>
+      <a class="nav-link" href="mahasiswa-dashboard.html"><span>Dashboard</span></a>
+      <a class="nav-link active" href="mahasiswa-cari-ruang.html"><span>Cari Ruangan</span></a>
+      <a class="nav-link" href="mahasiswa-reservasi.html"><span>Buat Reservasi</span></a>
+      <a class="nav-link" href="mahasiswa-riwayat.html"><span>Riwayat Saya</span></a>
+      <a class="nav-link" href="index.html">Keluar</a>
+      <div class="sidebar-bottom"><strong>Mahasiswa</strong><small>Panel Mahasiswa</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">WORKSPACE / MAHASISWA</p><h1>Cari Ruangan</h1><p class="muted">Pilih ruang sesuai kebutuhanmu.</p></div><div id="welcomeName">Mahasiswa</div></header>
+      <section class="content-card"><div class="section-heading"><div><h2>Ruang Belajar Tersedia</h2><p class="muted">Cari ruangan berdasarkan nama atau fasilitas.</p></div><input id="searchRoom" placeholder="Cari ruangan..." style="max-width:220px"></div><div class="room-grid" id="roomCards"><article class="room-card"><span class="pill available">Tersedia</span><h3>Ruang Belajar A</h3><p class="muted">Gedung A · Lantai 1</p><p>30 orang · Proyektor · Wi-Fi</p><a class="btn" href="mahasiswa-reservasi.html">Reservasi Ruang</a></article><article class="room-card"><span class="pill available">Tersedia</span><h3>Ruang Belajar B</h3><p class="muted">Gedung A · Lantai 2</p><p>25 orang · AC · Papan tulis</p><a class="btn" href="mahasiswa-reservasi.html">Reservasi Ruang</a></article><article class="room-card"><span class="pill booked">Terjadwal</span><h3>Ruang Diskusi C</h3><p class="muted">Gedung B · Lantai 1</p><p>12 orang · Wi-Fi · TV</p><button class="btn" disabled>Sedang Terjadwal</button></article></div></section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

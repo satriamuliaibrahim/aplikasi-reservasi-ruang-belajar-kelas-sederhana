@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Mahasiswa | Reservasi Ruang</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="mahasiswa">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="mahasiswa.html"><span class="brand-mark small">RB</span><span>RuangBelajar<small>Reservation System</small></span></a>
+      <div class="side-label">MENU MAHASISWA</div>
+      <a class="nav-link active" href="mahasiswa.html">▦ <span>Dashboard</span></a>
+      <a class="nav-link" href="#cari-ruang">⌕ <span>Cari Ruangan</span></a>
+      <a class="nav-link" href="#reservasi">＋ <span>Buat Reservasi</span></a>
+      <a class="nav-link" href="#riwayat">◷ <span>Riwayat Saya</span></a>
+      <a class="nav-link logout" href="index.html">↪ <span>Keluar</span></a>
+      <div class="sidebar-bottom"><div class="avatar">MH</div><div><strong>Mahasiswa</strong><small>Pengguna</small></div></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">WORKSPACE / MAHASISWA</p><h1>Dashboard Mahasiswa</h1></div><div class="topbar-right"><span class="status-dot"></span><span id="welcomeName">Mahasiswa</span><div class="avatar">MH</div></div></header>
+      <section class="welcome-panel"><div><p class="eyebrow light">HALO, MAHASISWA!</p><h2>Temukan ruang untuk ide besarmu.</h2><p>Cari ruang belajar yang sesuai, ajukan reservasi, dan pantau statusnya di sini.</p><a class="btn white-btn" href="#cari-ruang">Cari Ruangan <span>→</span></a></div><div class="welcome-icon">⌂</div></section>
+      <section class="stats-grid three">
+        <article class="stat-card"><div class="stat-top"><span>Reservasi Saya</span><span class="stat-icon purple">▣</span></div><strong id="myReservationCount">2</strong><small class="muted">Total pengajuan</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Menunggu</span><span class="stat-icon orange">◷</span></div><strong id="myPendingCount">1</strong><small class="muted">Menunggu konfirmasi</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Disetujui</span><span class="stat-icon green">✓</span></div><strong>1</strong><small class="muted">Reservasi diterima</small></article>
+      </section>
+      <section class="content-card" id="cari-ruang"><div class="section-heading"><div><h2>Ruang Belajar</h2><p class="muted">Pilih ruangan yang sesuai dengan kebutuhanmu.</p></div><input id="searchRoom" class="search-input" placeholder="Cari ruangan..."></div>
+        <div class="room-grid" id="roomCards">
+          <article class="room-card"><div class="room-visual purple-bg">▤</div><div class="room-body"><span class="pill available">Tersedia</span><h3>Ruang Belajar A</h3><p class="muted">Gedung A · Lantai 1</p><div class="room-meta"><span>♙ 30 orang</span><span>◈ Wi-Fi, Proyektor</span></div><button class="btn primary full reserve-room" data-room="Ruang Belajar A">Reservasi Ruang</button></div></article>
+          <article class="room-card"><div class="room-visual blue-bg">▦</div><div class="room-body"><span class="pill available">Tersedia</span><h3>Ruang Belajar B</h3><p class="muted">Gedung A · Lantai 2</p><div class="room-meta"><span>♙ 25 orang</span><span>◈ AC, Papan tulis</span></div><button class="btn primary full reserve-room" data-room="Ruang Belajar B">Reservasi Ruang</button></div></article>
+          <article class="room-card"><div class="room-visual green-bg">▥</div><div class="room-body"><span class="pill booked">Terjadwal</span><h3>Ruang Diskusi C</h3><p class="muted">Gedung B · Lantai 1</p><div class="room-meta"><span>♙ 12 orang</span><span>◈ Wi-Fi, TV</span></div><button class="btn secondary full" disabled>Sedang Terjadwal</button></div></article>
+        </div>
+      </section>
+      <section class="content-card" id="reservasi"><div class="section-heading"><div><h2>Buat Reservasi</h2><p class="muted">Lengkapi data untuk mengajukan pemakaian ruang.</p></div></div>
+        <form id="reservationForm" class="reservation-form">
+          <div class="form-field"><label for="studentName">Nama mahasiswa</label><input id="studentName" required placeholder="Nama lengkap"></div>
+          <div class="form-field"><label for="roomSelect">Pilih ruangan</label><select id="roomSelect" required><option value="">Pilih ruangan</option><option>Ruang Belajar A</option><option>Ruang Belajar B</option><option>Ruang Diskusi C</option></select></div>
+          <div class="form-field"><label for="reservationDate">Tanggal reservasi</label><input id="reservationDate" type="date" required></div>
+          <div class="form-field"><label for="reservationTime">Waktu</label><select id="reservationTime" required><option value="">Pilih waktu</option><option>08.00–10.00</option><option>10.00–12.00</option><option>13.00–15.00</option><option>15.00–17.00</option></select></div>
+          <div class="form-field wide"><label for="purpose">Keperluan</label><textarea id="purpose" rows="3" placeholder="Contoh: diskusi kelompok tugas kuliah" required></textarea></div>
+          <div class="form-field wide"><button class="btn primary" type="submit">Kirim Pengajuan <span>→</span></button><p id="formMessage" class="form-message" aria-live="polite"></p></div>
+        </form>
+      </section>
+      <section class="content-card" id="riwayat"><div class="section-heading"><div><h2>Riwayat Reservasi Saya</h2><p class="muted">Pantau perkembangan pengajuanmu.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Ruangan</th><th>Tanggal</th><th>Waktu</th><th>Keperluan</th><th>Status</th></tr></thead><tbody id="myReservationTable"><tr><td>Ruang Belajar A</td><td>28 Okt 2026</td><td>09.00–11.00</td><td>Diskusi tugas</td><td><span class="pill pending">Menunggu</span></td></tr><tr><td>Ruang Belajar B</td><td>29 Okt 2026</td><td>13.00–15.00</td><td>Belajar kelompok</td><td><span class="pill approved">Disetujui</span></td></tr></tbody></table></div>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
