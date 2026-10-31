@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buat Reservasi | Reservasi Ruang Belajar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="mahasiswa">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="mahasiswa-dashboard.html"><span class="brand-mark">RB</span><span>RuangBelajar<small>Reservation System</small></span></a>
+      <p class="eyebrow">MENU MAHASISWA</p>
+      <a class="nav-link" href="mahasiswa-dashboard.html"><span>Dashboard</span></a>
+      <a class="nav-link" href="mahasiswa-cari-ruang.html"><span>Cari Ruangan</span></a>
+      <a class="nav-link active" href="mahasiswa-reservasi.html"><span>Buat Reservasi</span></a>
+      <a class="nav-link" href="mahasiswa-riwayat.html"><span>Riwayat Saya</span></a>
+      <a class="nav-link" href="index.html">Keluar</a>
+      <div class="sidebar-bottom"><strong>Mahasiswa</strong><small>Panel Mahasiswa</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">WORKSPACE / MAHASISWA</p><h1>Buat Reservasi</h1><p class="muted">Isi formulir pengajuan ruang belajar.</p></div><div id="welcomeName">Mahasiswa</div></header>
+      <section class="content-card"><h2>Formulir Reservasi</h2><p class="muted">Lengkapi semua data yang diperlukan.</p><form id="reservationForm" class="reservation-form"><div class="form-field"><label for="studentName">Nama mahasiswa</label><input id="studentName" required placeholder="Nama lengkap"></div><div class="form-field"><label for="roomSelect">Pilih ruangan</label><select id="roomSelect" required><option value="">Pilih ruangan</option><option>Ruang Belajar A</option><option>Ruang Belajar B</option><option>Ruang Diskusi C</option></select></div><div class="form-field"><label for="reservationDate">Tanggal reservasi</label><input id="reservationDate" type="date" required></div><div class="form-field"><label for="reservationTime">Waktu</label><select id="reservationTime" required><option value="">Pilih waktu</option><option>08.00–10.00</option><option>10.00–12.00</option><option>13.00–15.00</option><option>15.00–17.00</option></select></div><div class="form-field wide"><label for="purpose">Keperluan</label><textarea id="purpose" rows="3" required placeholder="Contoh: diskusi kelompok tugas kuliah"></textarea></div><div class="form-field wide"><button class="btn" type="submit">Kirim Pengajuan →</button><p id="formMessage" class="muted"></p></div></form></section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

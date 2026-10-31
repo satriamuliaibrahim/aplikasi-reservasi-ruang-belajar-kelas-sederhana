@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Reservasi | Reservasi Ruang Belajar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="admin">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="admin-dashboard.html"><span class="brand-mark">RB</span><span>RuangBelajar<small>Reservation System</small></span></a>
+      <p class="eyebrow">MENU ADMIN</p>
+      <a class="nav-link" href="admin-dashboard.html"><span>Dashboard</span></a>
+      <a class="nav-link" href="admin-ruangan.html"><span>Data Ruangan</span></a>
+      <a class="nav-link active" href="admin-reservasi.html"><span>Data Reservasi</span></a>
+      <a class="nav-link" href="admin-pengguna.html"><span>Kelola Pengguna</span></a>
+      <a class="nav-link" href="admin-laporan.html"><span>Laporan</span></a>
+      <a class="nav-link" href="index.html">Keluar</a>
+      <div class="sidebar-bottom"><strong>Admin</strong><small>Panel Admin</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">WORKSPACE / ADMIN</p><h1>Data Reservasi</h1><p class="muted">Validasi pengajuan dan ambil keputusan akhir reservasi.</p></div><div id="welcomeName">Admin</div></header>
+      <section class="content-card"><h2>Semua Reservasi</h2><div class="table-wrap"><table><thead><tr><th>Mahasiswa</th><th>Ruangan</th><th>Tanggal</th><th>Status Petugas</th><th>Keputusan Admin</th><th>Aksi</th></tr></thead><tbody id="adminReservationTable"><tr><td>Andi Pratama</td><td>Ruang Belajar A</td><td>28 Okt 2026</td><td><span class="pill pending">Menunggu verifikasi</span></td><td><span class="pill pending">Menunggu</span></td><td><button class="btn" data-action="approve">Setujui</button> <button class="btn" style="background:#c4414c" data-action="reject">Tolak</button></td></tr><tr><td>Nadia Putri</td><td>Ruang Belajar B</td><td>29 Okt 2026</td><td><span class="pill approved">Direkomendasikan</span></td><td><span class="pill approved">Disetujui</span></td><td>Selesai diproses</td></tr><tr><td>Rizky Saputra</td><td>Ruang Diskusi C</td><td>30 Okt 2026</td><td><span class="pill approved">Direkomendasikan</span></td><td><span class="pill pending">Menunggu</span></td><td><button class="btn" data-action="approve">Setujui</button> <button class="btn" style="background:#c4414c" data-action="reject">Tolak</button></td></tr></tbody></table></div></section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

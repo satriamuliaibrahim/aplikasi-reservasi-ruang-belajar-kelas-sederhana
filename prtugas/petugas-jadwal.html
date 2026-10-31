@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Ruangan | Reservasi Ruang Belajar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="petugas">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="petugas-dashboard.html"><span class="brand-mark">RB</span><span>RuangBelajar<small>Reservation System</small></span></a>
+      <p class="eyebrow">MENU PETUGAS</p>
+      <a class="nav-link" href="petugas-dashboard.html"><span>Dashboard</span></a>
+      <a class="nav-link" href="petugas-pengajuan.html"><span>Pengajuan Reservasi</span></a>
+      <a class="nav-link active" href="petugas-jadwal.html"><span>Jadwal Ruangan</span></a>
+      <a class="nav-link" href="index.html">Keluar</a>
+      <div class="sidebar-bottom"><strong>Petugas</strong><small>Panel Petugas</small></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">WORKSPACE / PETUGAS</p><h1>Jadwal Ruangan</h1><p class="muted">Periksa jadwal pemakaian ruang belajar.</p></div><div id="welcomeName">Petugas</div></header>
+      <section class="content-card"><h2>Jadwal Ruangan</h2><p class="muted">Ringkasan status ruangan saat ini.</p><div class="schedule-grid"><div class="room-card"><span class="pill available">Tersedia</span><h3>Ruang Belajar A</h3><p>30 orang · Gedung A</p><p class="muted">Belum digunakan pada slot berikutnya.</p></div><div class="room-card"><span class="pill booked">Terjadwal</span><h3>Ruang Belajar B</h3><p>25 orang · Gedung A</p><p class="muted">Ada reservasi yang disetujui.</p></div><div class="room-card"><span class="pill available">Tersedia</span><h3>Ruang Diskusi C</h3><p>12 orang · Gedung B</p><p class="muted">Periksa pengajuan yang masuk.</p></div></div></section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

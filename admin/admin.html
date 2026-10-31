@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin | Reservasi Ruang</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="admin">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="admin.html"><span class="brand-mark small">RB</span><span>RuangBelajar<small>Reservation System</small></span></a>
+      <div class="side-label">MENU ADMIN</div>
+      <a class="nav-link active" href="admin.html">▦ <span>Dashboard</span></a>
+      <a class="nav-link" href="#ruang">▤ <span>Data Ruangan</span></a>
+      <a class="nav-link" href="#reservasi">▣ <span>Data Reservasi</span></a>
+      <a class="nav-link" href="#akun">♙ <span>Kelola Pengguna</span></a>
+      <a class="nav-link" href="#laporan">▥ <span>Laporan</span></a>
+      <a class="nav-link logout" href="index.html">↪ <span>Keluar</span></a>
+      <div class="sidebar-bottom"><div class="avatar">AD</div><div><strong>Administrator</strong><small>Admin Sistem</small></div></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">WORKSPACE / ADMIN</p><h1>Dashboard Admin</h1></div><div class="topbar-right"><span class="status-dot"></span><span id="welcomeName">Administrator</span><div class="avatar">AD</div></div></header>
+      <section class="welcome-panel"><div><p class="eyebrow light">PANEL ADMINISTRATOR</p><h2>Selamat datang di RuangBelajar</h2><p>Kelola ruang, pengguna, dan seluruh aktivitas reservasi dari satu tempat.</p></div><div class="welcome-icon">▦</div></section>
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Total Ruangan</span><span class="stat-icon purple">▤</span></div><strong id="roomCount">12</strong><small class="muted">Ruang terdaftar</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Total Reservasi</span><span class="stat-icon blue">▣</span></div><strong id="reservationCount">24</strong><small class="muted">Pengajuan tercatat</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Menunggu Persetujuan</span><span class="stat-icon orange">◷</span></div><strong id="pendingCount">5</strong><small class="muted">Perlu ditinjau petugas</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Pengguna Aktif</span><span class="stat-icon green">♙</span></div><strong>86</strong><small class="muted">Akun terdaftar</small></article>
+      </section>
+      <section class="content-card" id="ruang"><div class="section-heading"><div><h2>Daftar Ruangan</h2><p class="muted">Ringkasan ruang belajar yang tersedia.</p></div><button class="btn primary" id="addRoomBtn">＋ Tambah Ruangan</button></div>
+        <div class="table-wrap"><table><thead><tr><th>Nama Ruangan</th><th>Kapasitas</th><th>Fasilitas</th><th>Status</th></tr></thead><tbody id="roomTable">
+          <tr><td><strong>Ruang Belajar A</strong><small>Gedung A · Lantai 1</small></td><td>30 orang</td><td>Proyektor, Wi-Fi</td><td><span class="pill available">Tersedia</span></td></tr>
+          <tr><td><strong>Ruang Belajar B</strong><small>Gedung A · Lantai 2</small></td><td>25 orang</td><td>AC, Papan tulis</td><td><span class="pill available">Tersedia</span></td></tr>
+          <tr><td><strong>Ruang Diskusi C</strong><small>Gedung B · Lantai 1</small></td><td>12 orang</td><td>Wi-Fi, TV</td><td><span class="pill booked">Digunakan</span></td></tr>
+        </tbody></table></div>
+      </section>
+      <section class="content-card" id="reservasi"><div class="section-heading"><div><h2>Reservasi Terbaru</h2><p class="muted">Aktivitas pengajuan terbaru.</p></div><a class="text-link" href="petugas.html">Lihat pengajuan →</a></div>
+        <div class="table-wrap"><table><thead><tr><th>Mahasiswa</th><th>Ruangan</th><th>Tanggal</th><th>Status</th></tr></thead><tbody id="adminReservationTable">
+          <tr><td><strong>Andi Pratama</strong><small>23.01.001</small></td><td>Ruang Belajar A</td><td>28 Okt 2026</td><td><span class="pill pending">Menunggu</span></td></tr>
+          <tr><td><strong>Nadia Putri</strong><small>23.01.014</small></td><td>Ruang Belajar B</td><td>29 Okt 2026</td><td><span class="pill approved">Disetujui</span></td></tr>
+          <tr><td><strong>Rizky Saputra</strong><small>23.01.027</small></td><td>Ruang Diskusi C</td><td>30 Okt 2026</td><td><span class="pill rejected">Ditolak</span></td></tr>
+        </tbody></table></div>
+      </section>
+      <section class="content-card" id="akun"><div class="section-heading"><div><h2>Kelola Pengguna</h2><p class="muted">Akun yang menggunakan sistem reservasi.</p></div></div><p class="muted">Fitur pengelolaan akun dapat dikembangkan lebih lanjut dengan database.</p></section>
+      <section class="content-card" id="laporan"><div class="section-heading"><div><h2>Laporan</h2><p class="muted">Rekap reservasi untuk pemantauan administrator.</p></div><button class="btn secondary" onclick="window.print()">Cetak laporan</button></div></section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
